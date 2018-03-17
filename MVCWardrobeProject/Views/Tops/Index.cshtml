@@ -4,113 +4,83 @@
     ViewBag.Title = "Index";
 }
 <link href="~/TopsIndex.css" rel="stylesheet" />
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 
-<head>
+<div class="navbar navbar-inverse navbar-fixed-top" style="background-color:black;">
+        <div class="container" style="display:flex; justify-content:center;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Create", "Create", "Tops")</li>
+                    <li>@Html.ActionLink("Bottoms", "Index", "Bottoms")</li>
+                    <li>@Html.ActionLink("Shoes", "Index", "Shoes")</li>
+                    <li>@Html.ActionLink("Accessories", "Index", "Accessories")</li>
+                    <li>@Html.ActionLink("Outfits", "Index", "Outfits")</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+@*<h2 style="margin-top:12vh;">Index</h2>*@
+
+
+@*<head>
     <meta name="viewport" content="width=device-width">
-</head>
+</head>*@
 
 
 @*<div class="wrap">*@
-    <nav>
-        <ul class="primary"style="display:flex; justify-content:center; margin-top:30%" >
-            @foreach (var item in Model)
-            {
-                <li>
-                    <a href="">@Html.DisplayFor(modelItem => item.TopName)</a>
-                    <ul class="sub">
-                        <li><a href="">
-    @Html.DisplayNameFor(model => model.TopColor)
-:
-    @Html.DisplayFor(modelItem => item.TopColor)
-</a></li>
-                        <li><a href="">
-    @Html.DisplayNameFor(model => model.TopOccasion) :     @Html.DisplayFor(modelItem => item.TopOccasion)
-
-</a></li>
-                        <li><a href="">Some Mustard</a></li>
-                        <li>
-                            <a><img style="width:100px;" src="@Html.DisplayFor(modelItem => item.TopPhoto)" /></a>
-                        </li>
-                        
-                    </ul>
-                </li>
-            }
-            </ul>
-        </nav>
-    @*</div>*@
-
-    @foreach (var item in Model)
-    {
-        <div class="card">
-            <img style="width:100px;" src="@Html.DisplayFor(modelItem => item.TopPhoto)" />
-            <div class="cardcontainer">
-                <h2 id="clip-text">
-                    @Html.DisplayFor(modelItem => item.TopName)
-                </h2>
-                <p class="title">CEO & Founder</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>example@example.com</p>
-                <p><button class="button">Contact</button></p>
-
-            </div>
-        </div>
-    }
-
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.TopName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TopPhoto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TopColor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TopSeason)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TopOccasion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TopType)
-            </th>
-            <th></th>
-        </tr>
-
+<nav>
+    <ul class="primary" style="display:flex; justify-content:center; margin-top:40%">
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TopName)
-                </td>
-                <td>
-                    <img style="height:100px;width:100px;border-radius:50%;" src="@Html.DisplayFor(modelItem => item.TopPhoto)" />
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TopColor)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TopSeason)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TopOccasion)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TopType)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.TopID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.TopID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.TopID })
-                </td>
-            </tr>
-        }
+            <li>
+                <a href="">@Html.DisplayFor(modelItem => item.TopName)</a>
+                <ul class="sub" style="background-color:#DAA48B;color:#7E6C68;
+">
+                    <li>
+                        <a href="" style="background-color:#DAA48B;color:#7E6C68;
+">
+                            @Html.DisplayNameFor(model => model.TopColor)
+                            :
+                            @Html.DisplayFor(modelItem => item.TopColor)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" style="background-color:#DAA48B;color:#7E6C68;
+">
+                            @if (item.TopOccasion == null)
+                            { }
+                            else
+                            {@Html.DisplayNameFor(model => model.TopOccasion)
+                            @: :
+                            @Html.DisplayFor(modelItem => item.TopOccasion);
+                        }
 
-    </table>
+                        </a>
+                    </li>
+                    <li>
+                        <a><img style="width:100px;" src="@Html.DisplayFor(modelItem => item.TopPhoto)" /></a>
+                    </li>
+                    <li>
+                        <a>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.TopID })
+                            @Html.ActionLink("Details", "Details", new { id = item.TopID })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.TopID })
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+        }
+    </ul>
+</nav>

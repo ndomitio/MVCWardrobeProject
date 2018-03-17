@@ -1,4 +1,7 @@
-﻿
+﻿@font-face {
+    font-family: 'BenguiatStd-Bold';
+    src: url('Content/BenguiatStd-Bold.otf') format('opentype');
+}
 
 
 /*parallax background*/
@@ -6,7 +9,7 @@
 body {
     color: #2C7A95;
     background: url('Content/images/pulp-fiction-dance.png') no-repeat center center;
-    font-family: helvetica, arial, serif;
+    font-family: 'BenguiatStd-Bold';
     font-size: 13px;
     text-transform: uppercase;
     text-align: center;
@@ -17,6 +20,7 @@ body {
     background-size: cover;
 }
 /* A simple, css only, (some-what) responsive menu */
+
 
 .wrap {
     display: inline-block;
@@ -41,11 +45,13 @@ body {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #1785B2;
     display: block;
+    background-color:black;
 }
 
 ul {
+    background-color:black;
     list-style: none;
     position: relative;
     text-align: left;
@@ -124,14 +130,12 @@ ul.sub {
         }
 
         ul.sub li a:hover {
-
             color: #000;
             background: #eeeeee;
         }
 
 /* sub display*/
 ul.primary li:hover ul {
-
     display: block;
     background: #fff;
 }
