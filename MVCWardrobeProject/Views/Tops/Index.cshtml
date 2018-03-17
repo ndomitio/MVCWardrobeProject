@@ -1,0 +1,138 @@
+﻿@model IEnumerable<MVCWardrobeProject.Top>
+
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/TopsIndex.css" rel="stylesheet" />
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<head>
+    <meta name="viewport" content="width=device-width">
+</head>
+<div class="wrap">
+    <span class="decor"></span>
+    <nav>
+        <ul class="primary">
+            <li>
+                <a href="">Dog</a>
+                <ul class="sub">
+                    <li><a href="">Bulldog</a></li>
+                    <li><a href="">Mastiff</a></li>
+                    <li><a href="">Labrador</a></li>
+                    <li><a href="">Mutt</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Cat</a>
+                <ul class="sub">
+                    <li><a href="">Tabby</a></li>
+                    <li><a href="">Black Cat</a></li>
+                    <li><a href="">Wrinkly Cat</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Bird</a>
+                <ul class="sub">
+                    <li><a href="">Humming Bird</a></li>
+                    <li><a href="">Hawk</a></li>
+                    <li><a href="">Crow</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Horse</a>
+                <ul class="sub">
+                    <li><a href="">Brown Horse</a></li>
+                    <li><a href="">Race Horse</a></li>
+                    <li><a href="">Tall Horse</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Burger</a>
+                <ul class="sub">
+                    <li><a href="">Cheesy</a></li>
+                    <li><a href="">More Ketchup</a></li>
+                    <li><a href="">Some Mustard</a></li>
+                    <li><a href="">Extra Butter</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div id="container">
+    <div id="container2">
+
+        @foreach (var item in Model)
+        {
+            <div class="card">
+                <img style="width:100px;" src="@Html.DisplayFor(modelItem => item.TopPhoto)" />
+                <div class="cardcontainer">
+                    <h2 id="clip-text">
+                        @Html.DisplayFor(modelItem => item.TopName)
+                    </h2>
+                    <p class="title">CEO & Founder</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>example@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        }
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.TopName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TopPhoto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TopColor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TopSeason)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TopOccasion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TopType)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TopName)
+                    </td>
+                    <td>
+                        <img style="height:100px;width:100px;border-radius:50%;" src="@Html.DisplayFor(modelItem => item.TopPhoto)" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TopColor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TopSeason)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TopOccasion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TopType)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.TopID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.TopID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.TopID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
