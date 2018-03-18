@@ -171,7 +171,7 @@ ul.primary li:hover a {
 }
 
 ul.primary li:hover > a {
-    color: #CD2228;
+    color: #000;
 }
 
 @media only screen and (max-width: 600px) {
@@ -197,7 +197,7 @@ ul.primary li:hover > a {
     ul.primary li:hover ul {
         display: block;
         background: #272727;
-        color: #fff;
+        color: #000;
     }
 
     ul.sub {
