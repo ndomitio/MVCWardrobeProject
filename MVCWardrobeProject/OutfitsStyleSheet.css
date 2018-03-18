@@ -5,7 +5,7 @@
 
 /*body and navbar styling*/
 body {
-    margin: 0px;
+
     padding: 0px;
     font-family: "Open Sans", arial;
     background: url('Content/images/PFbackground.png');
@@ -27,7 +27,7 @@ body {
     float: left;
     
     background: url('Content/images/PFbackground2.png');
-    width: 250px;
+    width: 300px;
     margin: 0px;
     text-align: center;
     font-size: 20px;
@@ -94,7 +94,7 @@ body {
 
 
 .main-menu:hover, nav.main-menu.expanded {
-    width: 250px;
+    width: 300px;
     overflow: hidden;
     opacity: 1;
     background: url('Content/images/PFbackground2.png') no-repeat center center;

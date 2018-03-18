@@ -5,12 +5,65 @@
 }
 
 <link href="~/TopDetailsStyle.css" rel="stylesheet" />
-<h1 style="margin-top:1vh; color:	#020202!important;">Details</h1>
 
-<h3 style="margin-top:1vh;">
-    @Html.ActionLink("Back to List", "Index")
-</h3>
+<nav class="main-menu">
+    <div>
+        <a class="logo" href="http://startific.com">
+        </a>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    @*<div class="settings"></div>*@
+    <div class="scrollbar" id="style-1">
 
+        <ul>
+
+            <li>
+                <a href="@Url.Action("Index", "Home")">
+                    <i class="fa fa-home fa-lg"></i>
+                    <span class="nav-text">Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("Create", "Outfits")">
+                    <i class="fa fa-plus fa-lg"></i>
+                    <span class="nav-text">Create Outfits</span>
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index", "Tops")">
+                    <i class="fa fa-tumblr fa-lg"></i>
+                    <span class="nav-text">Tops</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("Index", "Bottoms")">
+                    <i class="fa fa-bold fa-lg"></i>
+                    <span class="nav-text">Bottoms</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("Index", "Accessories")">
+                    <i class="fa fa-adn fa-lg"></i>
+                    <span class="nav-text">Accessories</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("Index", "Shoes")">
+                    <i class="fa fa-strikethrough"></i>
+                    <span class="nav-text">Shoes</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
 
 
 <div class="cards-container">
