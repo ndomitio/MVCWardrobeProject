@@ -35,8 +35,8 @@
 
 .slide4 {
     background-size: cover;
-    animation: fade3 12s infinite;
-    -webkit-animation: fade3 12s infinite;
+    animation: fade4 12s infinite;
+    -webkit-animation: fade4 12s infinite;
 }
 
 @keyframes fade {
