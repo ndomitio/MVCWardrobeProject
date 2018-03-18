@@ -1,0 +1,81 @@
+﻿@font-face {
+    font-family: 'BenguiatStd-Bold';
+    src: url('Content/BenguiatStd-Bold.otf') format('opentype');
+}
+
+body {
+    background-image: url('Content/images/DUbg2.jpg');
+    background-size: cover;
+    font-family: 'BenguiatStd-Bold';
+}
+
+/*card styling*/
+
+
+.card-container {
+    -webkit-perspective: 900px;
+    perspective: 900px;
+}
+
+    .card-container:hover .card {
+        -webkit-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+    }
+
+.card {
+    -webkit-transition: -webkit-transform 0.7s;
+    transition: transform 0.7s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.back {
+    -webkit-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+    color: #F79B2C;
+    background-color: #452426;
+}
+
+/*Custom Styles*/
+.cards-container {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.card {
+    width: 25vw;
+    height: 45vh;
+    margin: 10px;
+}
+
+.front, .back {
+    width: 25vw;
+    height: 45vh;
+    box-shadow: 0 1px 6px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
+
+img {
+    width: 25vw;
+    height: 45vh;
+    display: block;
+}

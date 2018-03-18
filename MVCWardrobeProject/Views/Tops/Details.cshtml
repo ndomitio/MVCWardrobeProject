@@ -4,63 +4,43 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<link href="~/TopDetailsStyle.css" rel="stylesheet" />
+<h1 style="margin-top:1vh; color:	#020202!important;">Details</h1>
 
-<div>
-    <h4>Top</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.TopName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TopName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TopPhoto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TopPhoto)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TopColor)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TopColor)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TopSeason)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TopSeason)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TopOccasion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TopOccasion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TopType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TopType)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TopID }) |
+<h3>
     @Html.ActionLink("Back to List", "Index")
-</p>
+</h3>
+
+
+
+<div class="cards-container">
+    <div class="card-container">
+        <div class="card">
+            <div class="front">
+                <img src="@Html.DisplayFor(modelItem =>modelItem.ShoePhoto)" />
+            </div>
+            <div class="back" style="text-align:center;">
+                <p style="margin-top:20px">
+                    @Html.DisplayNameFor(model => model.ShoeName) : @Html.DisplayFor(model => model.ShoeName)
+                </p>
+                <p style="margin-top:20px">
+                    @Html.DisplayNameFor(model => model.ShoeColor) : @Html.DisplayFor(model => model.ShoeColor)
+                </p>
+                <p style="margin-top:20px">
+                    @Html.DisplayNameFor(model => model.ShoeSeason) : @Html.DisplayFor(model => model.ShoeSeason)
+                </p>
+                <p style="margin-top:20px">
+                    @Html.DisplayNameFor(model => model.ShoeOccasion) : @Html.DisplayFor(model => model.ShoeOccasion)
+                </p>
+                <p style="margin-top:20px">
+                    @Html.DisplayNameFor(model => model.ShoeType) : @Html.DisplayFor(model => model.ShoeType)
+                </p>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.ShoeID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = Model.ShoeID }) |
+                    @Html.ActionLink("Back to List", "Index")
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
