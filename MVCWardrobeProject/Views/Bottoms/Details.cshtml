@@ -3,64 +3,43 @@
 @{
     ViewBag.Title = "Details";
 }
+<link href="~/BottomDetailsStyle.css" rel="stylesheet" />
+<h1 style="margin-top:1vh; color:	#020202!important;">Details</h1>
 
-<h2>Details</h2>
-
-<div>
-    <h4>Bottom</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomPhoto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomPhoto)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomColor)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomColor)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomSeason)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomSeason)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomOccasion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomOccasion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomType)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.BottomID }) |
+<h3>
     @Html.ActionLink("Back to List", "Index")
-</p>
+</h3>
+
+
+
+<div class="cards-container">
+    <div class="card-container">
+        <div class="card">
+            <div class="front">
+                <img src="@Html.DisplayFor(modelItem =>modelItem.BottomPhoto)" />
+            </div>
+            <div class="back" style="text-align:center;">
+                <p style="margin-top:20px">
+                    @Html.DisplayNameFor(model => model.BottomName) : @Html.DisplayFor(model => model.BottomName)
+                </p>
+                <p style="margin-top:20px">
+                    @Html.DisplayNameFor(model => model.BottomColor) : @Html.DisplayFor(model => model.BottomColor)
+                </p>
+                <p style="margin-top:20px">
+                    @Html.DisplayNameFor(model => model.BottomSeason) : @Html.DisplayFor(model => model.BottomSeason)
+                </p>
+                <p style="margin-top:20px">
+                    @Html.DisplayNameFor(model => model.BottomOccasion) : @Html.DisplayFor(model => model.BottomOccasion)
+                </p>
+                <p style="margin-top:20px">
+                    @Html.DisplayNameFor(model => model.BottomType) : @Html.DisplayFor(model => model.BottomType)
+                </p>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.BottomID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = Model.BottomID }) |
+                    @Html.ActionLink("Back to List", "Index")
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
