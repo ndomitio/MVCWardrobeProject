@@ -37,12 +37,14 @@ body {
 .back {
     -webkit-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
-    color: #F79B2C;
-    background-color: #452426;
+    color: #4C475C;
+    background-color: #D19861;
 }
 
 /*Custom Styles*/
 .cards-container {
+    margin-top:-10vh;
+    margin-left:17vw;
     display: -webkit-flex;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -52,10 +54,6 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
 }
 
 .card {

@@ -7,7 +7,7 @@
 <link href="~/TopDetailsStyle.css" rel="stylesheet" />
 <h1 style="margin-top:1vh; color:	#020202!important;">Details</h1>
 
-<h3>
+<h3 style="margin-top:1vh;">
     @Html.ActionLink("Back to List", "Index")
 </h3>
 
@@ -17,27 +17,27 @@
     <div class="card-container">
         <div class="card">
             <div class="front">
-                <img src="@Html.DisplayFor(modelItem =>modelItem.ShoePhoto)" />
+                <img src="@Html.DisplayFor(modelItem =>modelItem.TopPhoto)" />
             </div>
             <div class="back" style="text-align:center;">
                 <p style="margin-top:20px">
-                    @Html.DisplayNameFor(model => model.ShoeName) : @Html.DisplayFor(model => model.ShoeName)
+                    @Html.DisplayNameFor(model => model.TopName) : @Html.DisplayFor(model => model.TopName)
                 </p>
                 <p style="margin-top:20px">
-                    @Html.DisplayNameFor(model => model.ShoeColor) : @Html.DisplayFor(model => model.ShoeColor)
+                    @Html.DisplayNameFor(model => model.TopColor) : @Html.DisplayFor(model => model.TopColor)
                 </p>
                 <p style="margin-top:20px">
-                    @Html.DisplayNameFor(model => model.ShoeSeason) : @Html.DisplayFor(model => model.ShoeSeason)
+                    @Html.DisplayNameFor(model => model.TopSeason) : @Html.DisplayFor(model => model.TopSeason)
                 </p>
                 <p style="margin-top:20px">
-                    @Html.DisplayNameFor(model => model.ShoeOccasion) : @Html.DisplayFor(model => model.ShoeOccasion)
+                    @Html.DisplayNameFor(model => model.TopOccasion) : @Html.DisplayFor(model => model.TopOccasion)
                 </p>
                 <p style="margin-top:20px">
-                    @Html.DisplayNameFor(model => model.ShoeType) : @Html.DisplayFor(model => model.ShoeType)
+                    @Html.DisplayNameFor(model => model.TopType) : @Html.DisplayFor(model => model.TopType)
                 </p>
                 <p>
-                    @Html.ActionLink("Edit", "Edit", new { id = Model.ShoeID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = Model.ShoeID }) |
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.TopID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = Model.TopID }) |
                     @Html.ActionLink("Back to List", "Index")
                 </p>
             </div>
