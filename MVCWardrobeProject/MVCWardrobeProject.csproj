@@ -191,6 +191,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AccessoryStyleSheet.css" />
     <Content Include="Bottoms.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -199,17 +200,23 @@
     <Content Include="Content\images\3collage.jpg" />
     <Content Include="Content\images\aldorain.jpg" />
     <Content Include="Content\images\blacksuit.jpg" />
+    <Content Include="Content\images\blacktie.jpg" />
+    <Content Include="Content\images\DUbg.jpg" />
     <Content Include="Content\images\kb background.jpg" />
     <Content Include="Content\images\KBblackandwhite.png" />
     <Content Include="Content\images\kbjacket.jpg" />
+    <Content Include="Content\images\kbpants.jpg" />
+    <Content Include="Content\images\KBshoe.jpg" />
     <Content Include="Content\images\KBsketch.jpg" />
     <Content Include="Content\images\Kill-Bill.jpg" />
     <Content Include="Content\images\michele-tanner-2015-pulp-fiction-study-final-03 %281%29.jpg" />
     <Content Include="Content\images\michele-tanner-2015-pulp-fiction-study-final-03.jpg" />
     <Content Include="Content\images\PFbackground.png" />
+    <Content Include="Content\images\PFbackground2.png" />
     <Content Include="Content\images\pulp-fiction-dance.png" />
     <Content Include="Content\images\pulpgiphy.gif" />
     <Content Include="Content\images\quentin.jpeg" />
+    <Content Include="Content\images\RDbg.jpg" />
     <Content Include="Content\images\rsz_blacksuit.jpg" />
     <Content Include="Content\images\rsz_kbblackandwhite.png" />
     <Content Include="Content\images\samuel L.png" />
@@ -271,6 +278,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="ShoesStyleSheet.css" />
     <Content Include="TopsIndex.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
