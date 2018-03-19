@@ -11,7 +11,8 @@ namespace MVCWardrobeProject
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Top
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,12 +22,12 @@ namespace MVCWardrobeProject
         }
     
         public int TopID { get; set; }
-        public string TopName { get; set; }
-        public string TopPhoto { get; set; }
-        public string TopColor { get; set; }
-        public string TopSeason { get; set; }
-        public string TopOccasion { get; set; }
-        public string TopType { get; set; }
+        [Display(Name = "Name")] public string TopName { get; set; }
+        [Display(Name = "Photo")] public string TopPhoto { get; set; }
+        [Display(Name = "Color")] public string TopColor { get; set; }
+        [Display(Name = "Season")] public string TopSeason { get; set; }
+        [Display(Name = "Occasion")] public string TopOccasion { get; set; }
+        [Display(Name = "Type")] public string TopType { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Outfit> Outfits { get; set; }

@@ -11,7 +11,8 @@ namespace MVCWardrobeProject
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Bottom
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,15 +20,18 @@ namespace MVCWardrobeProject
         {
             this.Outfits = new HashSet<Outfit>();
         }
-    
+
         public int BottomID { get; set; }
+        [Display(Name = "Name")]
         public string BottomName { get; set; }
+        [Display(Name = "Photo")]
         public string BottomPhoto { get; set; }
+        [Display(Name = "Color")]
         public string BottomColor { get; set; }
-        public string BottomSeason { get; set; }
-        public string BottomOccasion { get; set; }
-        public string BottomType { get; set; }
-    
+        [Display(Name = "Season")] public string BottomSeason { get; set; }
+        [Display(Name = "Occasion")] public string BottomOccasion { get; set; }
+        [Display(Name = "Type")] public string BottomType { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Outfit> Outfits { get; set; }
     }

@@ -11,7 +11,8 @@ namespace MVCWardrobeProject
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Shoe
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,12 +22,12 @@ namespace MVCWardrobeProject
         }
     
         public int ShoeID { get; set; }
-        public string ShoeName { get; set; }
-        public string ShoePhoto { get; set; }
-        public string ShoeColor { get; set; }
-        public string ShoeType { get; set; }
-        public string ShoeSeason { get; set; }
-        public string ShoeOccasion { get; set; }
+        [Display(Name = "Name")] public string ShoeName { get; set; }
+        [Display(Name = "Photo")] public string ShoePhoto { get; set; }
+        [Display(Name = "Color")] public string ShoeColor { get; set; }
+        [Display(Name = "Type")] public string ShoeType { get; set; }
+        [Display(Name = "Season")] public string ShoeSeason { get; set; }
+        [Display(Name = "Occasion")] public string ShoeOccasion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Outfit> Outfits { get; set; }

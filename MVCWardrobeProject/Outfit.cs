@@ -11,14 +11,15 @@ namespace MVCWardrobeProject
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Outfit
     {
         public int OutfitID { get; set; }
-        public int TopID { get; set; }
-        public int BottomID { get; set; }
-        public int ShoeID { get; set; }
-        public int AccessoryID { get; set; }
+        [Display(Name = "Top")] public int TopID { get; set; }
+        [Display(Name = "Bottom")] public int BottomID { get; set; }
+        [Display(Name = "Shoe")] public int ShoeID { get; set; }
+        [Display(Name = "Accessory")] public int AccessoryID { get; set; }
     
         public virtual Accessory Accessory { get; set; }
         public virtual Bottom Bottom { get; set; }
