@@ -91,24 +91,69 @@
 
 </body>
 </html>
+
 @foreach (var item in Model)
 {
 
-    <div class='slider'>
-        <div class='slide1'>
-            <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
-        </div>
-        <div class='slide2'>
-            <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" />
-        </div>
-        <div class='slide3'>
-            <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Bottom.BottomPhoto)" />
-        </div>
-        <div class='slide4'>
-            <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
+    <div class="w3-container" style="color:gray!important; margin-top:15vh;">
+        <h1>Outfits</h1>
+
+        <div class="w3-card-4" style="width:50%; margin-left:25%; margin-right:25%;margin-top:10%;">
+            <header class="w3-container">
+                <h1>@Html.DisplayFor(modelItem => item.Top.TopName)</h1>
+            </header>
+
+            <div class="w3-container">
+                <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" />
+            </div>
+            <header class="w3-container">
+                <h1>@Html.DisplayFor(modelItem => item.Bottom.BottomName)</h1>
+            </header>
+
+            <div class="w3-container">
+                <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
+            </div>
+            <header class="w3-container">
+                <h1>@Html.DisplayFor(modelItem => item.Shoe.ShoeName)</h1>
+            </header>
+
+            <div class="w3-container">
+                <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
+            </div>
+            <header class="w3-container">
+                <h1>@Html.DisplayFor(modelItem => item.Accessory.AccessoryName)</h1>
+            </header>
+
+            <div class="w3-container">
+                <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
+            </div>
+            <p style="margin-top:5%;">
+                @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.OutfitID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID })
+            </p>
+
         </div>
     </div>
 }
+    @*@foreach (var item in Model)
+    {
+
+<div class='slider' style="margin:30px;">
+    <div class='slide1'>
+        <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
+    </div>
+    <div class='slide2'>
+        <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" />
+    </div>
+    <div class='slide3'>
+        <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Bottom.BottomPhoto)" />
+    </div>
+    <div class='slide4'>
+        <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
+    </div>
+</div>
+    }*@
     @*<table class="table" style="margin-left: 4vw;margin-top:35vh">
             <tr>
                 <th>
